@@ -1,7 +1,12 @@
+import FormularioCadastro from "./components/FormularioCadastro";
+import ListaDeNotas from "./components/ListaDeNotas";
 
 function App() {
   return (
-    <div>Hello</div>
+    <section>
+      <FormularioCadastro/>
+      <ListaDeNotas/>
+    </section>
   );
 }
 
