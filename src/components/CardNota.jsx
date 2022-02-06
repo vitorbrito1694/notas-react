@@ -3,11 +3,11 @@ import React, { Component } from "react";
 class CardNota extends Component {
   render() {
     return (
-      <section>
+      <section className="bg-slate-200 p-4 rounded-lg">
         <header>
-          <h3>Título</h3>
+          <h3 className="font-bold text-slate-500 mb-2">Tarefa1</h3>
         </header>
-        <p>Escreva sua nota</p>
+        <p className="p-2">Escreva sua nota</p>
       </section>
     );
   }
