@@ -1,20 +1,30 @@
 import React, { Component } from "react";
-import CardNota from "./CardNota";
 
 class FormularioCadastro extends Component {
+  constructor() {
+    super();
+    this.titulo = "";
+  }
+
+  handleMudancaTitulo(evento) {
+    this.titulo = evento.target.value;
+    console.log(this.titulo);
+  }
+
   render() {
     return (
-      <div className="flex">
-        <div className="grid columns-1 justify-center content-start bg-slate-0 h-screen border-solid border-r-2 border-slate-300">
+      <form className="">
+        <div className="h-screen bg-slate-0 border-solid border-r-2 border-slate-300">
           <input
-            className="bg-slate-200 p-2 mt-6 mx-6 w-60 rounded-lg"
+            className="flex-initial w-64 bg-slate-200 p-2 mt-6 mx-6 rounded-lg"
             type="text"
             name="form__titulo"
             id="form__titulo"
             placeholder="Título"
+            onChange={this.handleMudancaTitulo.bind(this)}
           />
           <textarea
-            className="bg-slate-200 p-2 mt-3 mx-6 w-auto rounded-lg"
+            className="flex-initial w-64 bg-slate-200 p-2 mt-3 mx-6 rounded-lg"
             name="form__texto"
             id="form__texto"
             rows={15}
@@ -24,12 +34,7 @@ class FormularioCadastro extends Component {
             Criar Nota
           </button>
         </div>
-        <div className="m-6">
-          <CardNota />
-          <CardNota />
-          <CardNota />
-        </div>
-      </div>
+      </form>
     );
   }
 }
