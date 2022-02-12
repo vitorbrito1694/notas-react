@@ -5,10 +5,10 @@ function App() {
   return (
     <section className="flex flex-row">
       <div className="basis-1/5">
-        <FormularioCadastro/>
+        <FormularioCadastro />
       </div>
       <div className="basis-4/5 p-6">
-        <ListaDeNotas/>
+        <ListaDeNotas />
       </div>
     </section>
   );
