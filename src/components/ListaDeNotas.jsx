@@ -4,19 +4,17 @@ import CardNota from "./CardNota";
 class ListaDeNotas extends Component {
   render() {
     return (
-      <ul className="flex flex-wrap justify-between">
-        {Array.of("Trabalho", "Trabalho", "Estudos", 1, 1, 1).map(
-          (categoria, index) => {
-            return (
-              <div className="flex-auto w-64 max-w-full">
-                <li className="" key={index}>
-                  <div>{categoria}</div>
-                  <CardNota />
-                </li>
-              </div>
-            );
-          }
-        )}
+      <ul className="flex flex-wrap">
+        {this.props.notas.map((categoria, index) => {
+          return (
+            <div className="flex-1 w-64 max-w-full" key={index}>
+              <li>
+                <div>{categoria}</div>
+                <CardNota />
+              </li>
+            </div>
+          );
+        })}
       </ul>
     );
   }
