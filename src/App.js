@@ -8,6 +8,7 @@ class App extends Component {
     this.notas = [];
   }
   criarNota(titulo, texto) {
+    //funcao para criar nota
     const novaNota = { titulo, texto };
     this.notas.push(novaNota);
     console.log("uma nova nota foi criada" + titulo + " " + texto);
@@ -15,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <section className="flex flex-row">
-        <div className="basis-1/5">
+        <div className="basis-1/5 p-6 border-solid border-r-2 border-slate-300">
           <FormularioCadastro criarNota={this.criarNota.bind(this)} />
         </div>
         <div className="basis-4/5 p-6">
