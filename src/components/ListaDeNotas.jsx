@@ -5,11 +5,11 @@ class ListaDeNotas extends Component {
   render() {
     return (
       <ul className="flex justify-start flex-wrap ">
-        {this.props.notas.map((categoria, index) => {
+        {this.props.notas.map((nota, index) => {
           return (
             <div className="flex-initial w-64 max-w-full" key={index}>
               <li>
-                <CardNota categoria={categoria} />
+                <CardNota titulo={nota.titulo} texto={nota.texto} />
               </li>
             </div>
           );
